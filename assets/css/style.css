@@ -1,5 +1,13 @@
-*,::after,::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #fff;
+    --primary-color: #51586A;
+    --primary-heading: #080415;
 }
 
 html {
@@ -11,3 +19,86 @@ body {
     font-family: "DM Sans", sans-serif;
 }
 
+/* --- Common ---*/
+
+a {
+    text-decoration: none;
+}
+
+/* --- Header ---  */
+.header {
+    background: #fbfaff;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .email {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.header .email::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -11px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #5d3bee;
+    opacity: 0.2;
+}
+
+.header .email__text {
+    color: var(--primary-heading);
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.36;
+    text-decoration-line: underline;
+}
+
+.header .logo {
+    margin-left: 357px;
+}
+
+.header .navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation {
+    margin-left: auto;
+}
+
+.header .navigation__link {
+    position: relative;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 8px 22px;
+
+}
+
+.header .navigation__link::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #5d3bee;
+    transition: width .3s;
+}
+
+.header .navigation__link:hover::after {
+    width: 100%;
+   
+}
