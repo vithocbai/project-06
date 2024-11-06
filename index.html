@@ -56,31 +56,28 @@
             sizes="192x192"
             href="./assets/favicon/android-icon-192x192.png"
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
+       
         <link
             rel="icon"
             type="image/png"
             sizes="96x96"
             href="./assets/favicon/favicon-96x96.png"
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="./assets/favicon//manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
             name="msapplication-TileImage"
             content="./assets/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
+        <!-- Font Icon  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
@@ -93,11 +90,13 @@
                 <div class="menu">
                     <!-- Email -->
                     <div class="email">
-                        <img
-                            src="./assets/icon/icon-heart.png"
-                            alt=""
-                            class="email__icon"
-                        />
+                        <div class="email__icon">
+                            <img
+                                src="./assets/icon/icon-heart.png"
+                                alt=""
+                                class="email__icon--heart"
+                            />
+                        </div>
                         <div class="email__text">hi@arif.interactive</div>
                     </div>
                     <!-- Logo -->
@@ -122,5 +121,55 @@
                 </div>
             </div>
         </header>
+        <!-- Main -->
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero__inner">
+                    <div class="hero__media">
+                        <img
+                            src="./assets/img/hero-img.png"
+                            alt="An Interactive Designer"
+                        />
+                    </div>
+                    <div class="hero__content">
+                        <div class="hero__content-heading">
+                            An Interactive Designer
+                        </div>
+                        <div class="hero__content-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </div>
+                        <div class="hero__content-row">
+                            <a href="" class="btn hero__content-book"
+                                >Book a Call</a
+                            >
+                            <a href="" class="hero__content-link">My Works</a>
+                        </div>
+                        <div class="hero__content-row hero__content-footer">
+                            <p class="hero__content-text">Follow me on:</p>
+                            <div class="hero-social">
+                                <div class="hero-social__icon">
+                                    <a href="#!" class="hero-social__link">
+                                        <i class="fa-brands fa-behance"></i
+                                    ></a>
+                                </div>
+                                <div class="hero-social__icon">
+                                    <a href="#!" class="hero-social__link">
+                                        <i class="fa-brands fa-dribbble"></i
+                                    ></a>
+                                </div>
+                                <div class="hero-social__icon">
+                                    <a href="#!" class="hero-social__link">
+                                        <i class="fa-brands fa-instagram"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
