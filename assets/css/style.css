@@ -44,6 +44,22 @@ a {
     opacity: 0.9;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line,3);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-1 {
+   --line: 1;
+}
+
+.line-clamp-2 {
+    --line: 2;
+ }
+ 
+
 /* --- Header ---  */
 .header {
     background: #fbfaff;
@@ -293,4 +309,102 @@ a {
     gap: 34px;
 }
 
+/* --- Specialities ---  */
+.specialities {
+    margin-top: 33px;
+    padding: 50px 0;
+    background-color: var(--primary-bg);
+}
 
+.specialities__container {
+    width: 1170px;
+}
+
+.specialities__sub-heading {
+    text-align: center;
+    color: var(--primary-heading);
+    font-size: 5.6rem;
+    font-weight: 500;
+    letter-spacing: -2.24px;
+}
+
+.specialities__desc {
+    margin: 20px auto 0;
+    max-width: 534px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+}
+
+.specialities__list {
+    margin-top: 60px;
+}
+
+.specialities__item {
+    width: 370px;
+    padding: 32px 42px;
+    background: #fbfaff;
+}
+
+.specialities__item:hover {
+    box-shadow: 1px 1px 5px #e4e2eb;
+}
+
+.specialities__icon {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+}
+
+.specialities__icon:hover  {
+   cursor: pointer;
+}
+
+.specialities__icon img {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+}
+
+.specialities__icon::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--primary-btn);
+    opacity: 0.2;
+}
+
+.specialities__icon:hover::before {
+    opacity: 1;
+}
+
+.specialities__item-sub-heading {
+    margin-top: 40px;
+    color: var(--primary-heading);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
+}
+
+.specialities__item-desc {
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+}
+
+.line-clamp {
+
+}
