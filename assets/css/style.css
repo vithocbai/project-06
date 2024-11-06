@@ -93,6 +93,9 @@ a {
 
 .header .logo {
     margin-left: 357px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .header .navigation__list {
@@ -130,18 +133,32 @@ a {
 
 /* -- Hero-Inner */
 .hero {
+    position: relative;
     background: #fbfaff;
 }
 
 .hero__inner {
     display: flex;
     justify-content: center;
+    padding-top: 44px;
 }
 
 .hero__media {
-    max-width: 514px;
+    position: relative;
+    min-width: 514px;
     height: 705px;
     flex-shrink: 0;
+}
+
+.hero__media-img {
+    position: relative;
+    z-index: 1;
+}
+
+.media--diagonal-line {
+    position: absolute;
+    right: -156px;
+    top: -80px;
 }
 
 .hero__content {
@@ -227,4 +244,10 @@ a {
 
 .hero-social__link:hover::after{
     opacity: 1;
+}
+
+.hero__diagonal {
+    position: absolute;
+    right: calc((100vw - 1330px) / 2 - 80px);
+    bottom: 0;
 }
