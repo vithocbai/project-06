@@ -59,6 +59,42 @@ a {
     --line: 2;
 }
 
+.dots {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background: #080415;
+    border-radius: 50%;
+    opacity: 0.2;    
+}
+
+.dot.active {
+    position: relative;
+    background-color: #5D3BEE;
+    opacity: 1;
+}
+
+.dot.active::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: 2px solid #5D3BEE;
+}
+
 /* --- Header ---  */
 .header {
     background: #fbfaff;
@@ -587,6 +623,7 @@ a {
 
 .about__video {
     position: relative;
+    z-index: 2;
     margin-top: 70px;
 }
 
@@ -617,4 +654,107 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     background-color: var(--primary-bg);
+}
+
+/* Evaluate */
+
+.evaluate {
+    position: relative;
+    margin-top: -347px;
+    padding: 450px 0 74px;
+    background-color: #fbfaff;
+}
+
+.evaluate__sub-heading {
+    text-align: center;
+    color: var(--primary-heading);
+    font-size: 5.6rem;
+    font-weight: 500;
+    letter-spacing: -2.24px;
+}
+
+.evaluate__desc {
+    max-width: 46%;
+    margin: 20px auto 0;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.evaluate__list {
+    display: flex;
+    overflow: hidden;
+}
+
+.evaluate__people {
+    flex-shrink: 0;
+    width: 100%;
+    display: none;
+}
+
+.evaluate__people.active {
+    display: block;
+}
+
+.evaluate__comment {
+    max-width: 58%;
+    margin: 60px auto 0;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.evaluate__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    gap: 15px;
+}
+
+.evaluate__icon {
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    background: #f29764;
+    border-radius: 50%;
+    padding-top: 6px;
+}
+
+.evaluate__avatar img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.evaluate__title {
+    color: var(--primary-heading);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.34;
+}
+
+.evaluate__avatar-mt {
+    margin-top: 0px;
+}
+
+.evaluate__diagonal--left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.evaluate__diagonal--right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
