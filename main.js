@@ -30,3 +30,27 @@ dots.forEach((dot,index)=>{
         evaluate.classList.add("active");
     }
 })
+
+// Question
+let btnDetails = document.querySelectorAll(".question__img--detail");
+let btnSubtracts = document.querySelectorAll(".question__img--subtract");
+let questionTitles = document.querySelectorAll(".question__list-title");
+let questionDescs = document.querySelectorAll(".question__list-desc")
+
+btnDetails.forEach((btnDetail,index)=>{
+    // btnDetail
+    btnDetail.onclick = function() {
+        btnDetail.classList.remove("active");
+        btnSubtracts[index].classList.add("active");
+        questionTitles[index].classList.add("active");
+        questionDescs[index].style.display = "block";
+    }
+    // btnSubtracts
+    btnSubtracts[index].onclick = function() {
+        btnSubtracts[index].classList.remove("active");
+        btnDetail.classList.add("active");
+        questionTitles[index].classList.remove("active");
+        questionDescs[index].style.display = "none";
+    }
+})
+
