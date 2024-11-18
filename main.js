@@ -43,6 +43,7 @@ btnDetails.forEach((btnDetail,index)=>{
         btnDetail.classList.remove("active");
         btnSubtracts[index].classList.add("active");
         questionTitles[index].classList.add("active");
+        questionTitles[index].style.marginBottom  = "0px";
         questionDescs[index].style.display = "block";
     }
     // btnSubtracts
@@ -50,6 +51,7 @@ btnDetails.forEach((btnDetail,index)=>{
         btnSubtracts[index].classList.remove("active");
         btnDetail.classList.add("active");
         questionTitles[index].classList.remove("active");
+        questionTitles[index].style.marginBottom  = "33px";
         questionDescs[index].style.display = "none";
     }
 })
