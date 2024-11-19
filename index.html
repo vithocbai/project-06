@@ -78,6 +78,14 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+
+        <!-- Animation -->
+        <link rel="stylesheet" href="./assets/css/animate.css" />
+
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
@@ -107,16 +115,24 @@
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li>
-                                <a href="" class="navigation__link">Projects</a>
+                                <a href="#project" class="navigation__link"
+                                    >Projects</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Journey</a>
+                                <a href="#client" class="navigation__link"
+                                    >Journey</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Service</a>
+                                <a href="#service" class="navigation__link"
+                                    >Service</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Contact</a>
+                                <a href="#contact" class="navigation__link"
+                                    >Contact</a
+                                >
                             </li>
                         </ul>
                     </nav>
@@ -143,9 +159,11 @@
                             />
                         </div>
                         <div class="hero__content">
-                            <div class="hero__content-heading">
+                            <h1
+                                class="hero__content-heading animate__animated animate__bounce"
+                            >
                                 An Interactive Designer
-                            </div>
+                            </h1>
                             <div class="hero__content-desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non nisl tincidunt ut
@@ -191,9 +209,12 @@
             </section>
 
             <!-- Client -->
-            <section class="client">
+            <section id="client" class="client">
                 <div class="container">
-                    <div class="client__inner">
+                    <div
+                        class="client__inner aos-init aos-animate"
+                        data-aos="fade-down"
+                    >
                         <h2 class="client__sub-heading">
                             Meet my recent clients
                         </h2>
@@ -251,17 +272,24 @@
             <section class="specialities">
                 <div class="container">
                     <div class="specialities__inner">
-                        <div
-                            class="specialities__sub-heading line-clamp line-clamp-1"
-                        >
-                            Specialities
+                        <div data-aos="flip-right">
+                            <div
+                                class="specialities__sub-heading line-clamp line-clamp-1"
+                            >
+                                Specialities
+                            </div>
+                            <p
+                                class="specialities__desc line-clamp line-clamp-2"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. In urna, non nisl tincidunt ut
+                                elementum turpis.
+                            </p>
                         </div>
-                        <p class="specialities__desc line-clamp line-clamp-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. In urna, non nisl tincidunt ut elementum
-                            turpis.
-                        </p>
-                        <div class="row row-cols-lg-3 specialities__list">
+                        <div
+                            class="row row-cols-lg-3 specialities__list"
+                            data-aos="flip-right"
+                        >
                             <div class="col">
                                 <div class="specialities__item">
                                     <div class="specialities__icon">
@@ -334,10 +362,10 @@
             </section>
 
             <!-- Project -->
-            <section class="project">
+            <section id="project" class="project">
                 <div class="container">
                     <div class="project__inner">
-                        <div class="project__head">
+                        <div class="project__head" data-aos="fade-down">
                             <h2 class="project__sub-heading">
                                 Take a look at my recent projects
                             </h2>
@@ -347,7 +375,7 @@
                                 elementum turpis.
                             </p>
                         </div>
-                        <div class="row row-list">
+                        <div class="row row-list" data-aos="fade-up">
                             <div class="col-lg-6">
                                 <div class="project__item">
                                     <div class="project__item-content">
@@ -485,56 +513,69 @@
             <!-- About -->
             <section class="about">
                 <div class="container">
-                    <div class="about__title">
-                        <span> Hey,,,,It’s Arif</span>
-                        <img src="./assets/icon/hand.svg" alt="" />
-                    </div>
-                    <h2 class="about__sub-heading line-clamp line-clamp-1">
-                        Interactive Designer
-                    </h2>
-                    <p class="about__desc line-clamp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In urna, non nisl tincidunt ut elementum turpis.
-                    </p>
-                    <span class="about__separation"></span>
-                    <div class="about__list">
-                        <div class="about__item">
-                            <div class="about__statistical">08+</div>
-                            <p class="about__item-desc">Years Experience</p>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__statistical">21+</div>
-                            <p class="about__item-desc">Features & Awards</p>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__statistical">97%</div>
-                            <p class="about__item-desc">Clients Rating</p>
-                        </div>
-                    </div>
-                    <span class="about__separation"></span>
-                    <div class="row row-cols-1 about__video">
-                        <div class="col">
-                            <button class="about__play">
-                                <img
-                                    src="./assets/icon/about-play.svg"
-                                    alt=""
-                                />
-                            </button>
-                            <video
-                                id="videoPlayer"
-                                width="100%"
-                                height="628px"
-                                controls
-                                poster="./assets/img/about-video.png"
+                    <div class="about__inner">
+                        <div class="about__content" data-aos="fade-right">
+                            <div class="about__title">
+                                <span> Hey,,,,It’s Arif</span>
+                                <img src="./assets/icon/hand.svg" alt="" />
+                            </div>
+                            <h2
+                                class="about__sub-heading line-clamp line-clamp-1"
                             >
-                                <source
-                                    src="./assets/video/Động lực để học IT.mp4"
-                                    type="video/mp4"
-                                />
-                            </video>
-                            <a href="#!" class="about__intro btn"
-                                >Intro Video</a
-                            >
+                                Interactive Designer
+                            </h2>
+                            <p class="about__desc line-clamp">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. In urna, non nisl tincidunt ut
+                                elementum turpis.
+                            </p>
+                            <span class="about__separation"></span>
+                            <div class="about__list">
+                                <div class="about__item">
+                                    <div class="about__statistical">08+</div>
+                                    <p class="about__item-desc">
+                                        Years Experience
+                                    </p>
+                                </div>
+                                <div class="about__item">
+                                    <div class="about__statistical">21+</div>
+                                    <p class="about__item-desc">
+                                        Features & Awards
+                                    </p>
+                                </div>
+                                <div class="about__item">
+                                    <div class="about__statistical">97%</div>
+                                    <p class="about__item-desc">
+                                        Clients Rating
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="about__separation"></span>
+                        <div class="row row-cols-1 about__video" data-aos="flip-up">
+                            <div class="col">
+                                <button class="about__play">
+                                    <img
+                                        src="./assets/icon/about-play.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <video
+                                    id="videoPlayer"
+                                    width="100%"
+                                    height="628px"
+                                    controls
+                                    poster="./assets/img/about-video.png"
+                                >
+                                    <source
+                                        src="./assets/video/Động lực để học IT.mp4"
+                                        type="video/mp4"
+                                    />
+                                </video>
+                                <a href="#!" class="about__intro btn"
+                                    >Intro Video</a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -543,11 +584,15 @@
             <!-- Evaluate -->
             <section class="evaluate">
                 <div class="container">
-                    <h2 class="evaluate__sub-heading">What people says</h2>
-                    <p class="evaluate__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In urna, non nisl tincidunt ut elementum turpis.
-                    </p>
+                    <div class="evaluate__head" data-aos="fade-up-right">
+                        <h2 class="evaluate__sub-heading">What people says</h2>
+                        <p class="evaluate__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+                    </div>
+
                     <div class="evaluate__list">
                         <!-- People-1 -->
                         <div class="evaluate__people active">
@@ -685,14 +730,15 @@
                 />
             </section>
 
-            <!-- Client -->
+            <!-- Question -->
             <section class="question">
                 <div class="container">
                     <div class="question__wrapper">
                         <h2 class="question__sub-heading">
                             A few questions clients normally ask me
                         </h2>
-                        <div class="question__list">
+                        <div class="question__list" data-aos="fade-down"  data-aos-easing="linear"
+                        data-aos-duration="1500">
                             <!-- Item 1 -->
                             <div class="question__list-item">
                                 <div class="question__list-content">
@@ -828,9 +874,9 @@
             </section>
 
             <!-- Feature -->
-            <section class="feature">
+            <section id="service" class="feature">
                 <div class="container">
-                    <div class="feature__inner">
+                    <div class="feature__inner" data-aos="fade-up"   data-aos-duration="3000">
                         <h2 class="feature__sub-heading">My atmosphere</h2>
                         <p class="feature__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -870,7 +916,7 @@
             </section>
 
             <!-- Concact -->
-            <section class="contact">
+            <section id="contact" class="contact">
                 <div class="container">
                     <div class="contact__inner">
                         <img
@@ -933,21 +979,30 @@
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li>
-                                <a href="" class="navigation__link">Projects</a>
+                                <a href="#project" class="navigation__link"
+                                    >Projects</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Journey</a>
+                                <a href="#client" class="navigation__link"
+                                    >Journey</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Service</a>
+                                <a href="#service" class="navigation__link"
+                                    >Service</a
+                                >
                             </li>
                             <li>
-                                <a href="" class="navigation__link">Contact</a>
+                                <a href="#contact" class="navigation__link"
+                                    >Contact</a
+                                >
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="separation"></div>
+                <!-- Footer -->
                 <div class="footer__info">
                     <p class="footer__copyright">
                         ©interactiveArif 2021. All rights reserved.
@@ -967,6 +1022,10 @@
                 </div>
             </div>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script src="./main.js"></script>
     </body>
 </html>
