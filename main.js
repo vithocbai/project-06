@@ -11,25 +11,37 @@ videoPlayer.onclick = function(e){
     }
 }
 
+// TabUI Dots
+function setupTabs(containerSelector, itemSelector, dotSelector) {
+    const containers = document.querySelectorAll(containerSelector);
+    
+    containers.forEach((container) => {
+        const items = container.querySelectorAll(itemSelector);
+        const dots = container.querySelectorAll(dotSelector);
 
+        dots.forEach((dot, index) => {
+            dot.onclick = function () {
+                // Xóa class 'active' khỏi dot và item hiện tại
+                container.querySelector(`${dotSelector}.active`)?.classList.remove('active');
+                container.querySelector(`${itemSelector}.active`)?.classList.remove('active');
 
-// Tabui section evaluate
-let evaluates = document.querySelectorAll(".evaluate__people");
-let dots = document.querySelectorAll(".dot")
+                // Thêm class 'active' vào dot và item được chọn
+                dot.classList.add('active');
+                items[index]?.classList.add('active');
+            };
+        });
+    });
+}
 
-dots.forEach((dot,index)=>{
-    let evaluate = evaluates[index];
-    dot.onclick = function(){
-        let dotActive = document.querySelector(".dot.active");
+// Áp dụng cho specialities__inner
+setupTabs('.specialities__inner','.col','.dot')
 
-        dotActive.classList.remove("active");
-        this.classList.add("active");
+// Áp dụng cho evaluate__list
+setupTabs('.container__evaluate', '.evaluate__people', '.dot');
 
-        let evaluateActive = document.querySelector(".evaluate__people.active");
-        evaluateActive.classList.remove("active");
-        evaluate.classList.add("active");
-    }
-})
+// Áp dụng cho feature__list
+setupTabs('.feature__list', '.col', '.dot');
+
 
 // Question
 let btnDetails = document.querySelectorAll(".question__img--detail");
@@ -55,4 +67,28 @@ btnDetails.forEach((btnDetail,index)=>{
         questionDescs[index].style.display = "none";
     }
 })
+
+
+// === Responsive === 
+
+// Navigation Mobile Tablet
+let navigation = document.querySelector(".navigation");
+let navMobile = document.querySelector("#nav-mobile");
+navMobile.innerHTML = navigation.innerHTML;
+
+
+// Handle Drawer
+let menuDrawer = document.querySelector(".menu-drawer");
+let closeDrawer = document.querySelector(".menu-drawer--close");
+let overlay = document.querySelector(".overlay");
+let bar = document.querySelector(".bar");
+bar.onclick = function() {
+    menuDrawer.style.transform = "translateX(0)";
+    overlay.style.visibility = "visible";
+}
+
+closeDrawer.onclick = function(){
+    menuDrawer.style.transform = "translateX(-101%)";
+    overlay.style.visibility = "hidden";
+}
 

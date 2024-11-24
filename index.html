@@ -90,6 +90,7 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
@@ -111,6 +112,17 @@
                     <a href="">
                         <img src="./assets/icon/logo.png" alt="" class="logo" />
                     </a>
+
+                    <!-- Email Mobile -->
+                    <div class="menu__email email__show-mobile">
+                        <div class="menu__email-icon">
+                            <img
+                                src="./assets/icon/icon-heart.png"
+                                alt=""
+                                class="menu__email-icon--heart"
+                            />
+                        </div>
+                    </div>
                     <!-- Navigation -->
                     <nav class="navigation">
                         <ul class="navigation__list">
@@ -136,8 +148,28 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Bar Table Mobile-->
+                    <div class="bar">
+                        <img src="./assets/icon/bar.svg" alt="" />
+                    </div>
                 </div>
             </div>
+        </header>
+
+        <!-- Header Table Mobile -->
+        <header class="header-table">
+            <div class="overlay"></div>
+
+            <!-- Drawer -->
+            <section class="menu-drawer">
+                <!-- Close -->
+                <div class="menu-drawer--close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <!-- Navigation -->
+                <nav id="nav-mobile" class="navigation"></nav>
+            </section>
         </header>
         <!-- Main -->
         <main>
@@ -146,17 +178,38 @@
                 <div class="container">
                     <div class="hero__inner">
                         <div class="hero__media">
-                            <img
-                                class="hero__media-img"
-                                src="./assets/img/hero-img.png"
-                                alt="An Interactive Designer"
-                            />
-
-                            <img
-                                class="media--diagonal-line"
-                                src="./assets/icon/media-diagonal.svg"
-                                alt=""
-                            />
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="./assets/img/hero-img-mobile.png"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="./assets/img/hero-img.png"
+                                />
+                                <img
+                                    class="hero__media-img"
+                                    src="./assets/icon/her"
+                                    alt="An Interactive Designer"
+                                />
+                            </picture>
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="
+                                        ./assets/icon/hero-decorate-mobile01.svg
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="./assets/icon/hero-decorate-01.svg"
+                                />
+                                <img
+                                    class="media--decorate"
+                                    src="./assets/icon/hero-decorate-01.svg"
+                                    alt="An Interactive Designer"
+                                />
+                            </picture>
                         </div>
                         <div class="hero__content">
                             <h1
@@ -199,12 +252,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Diagonal -->
+                            <div class="hero__diagonal">
+                                <img
+                                    class="hero__diagonal"
+                                    src="./assets/icon/hero-decorate-02.svg"
+                                    alt=""
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Diagonal -->
-                <div class="hero__diagonal">
-                    <img src="./assets/icon/hero-diagonal.svg" alt="" />
                 </div>
             </section>
 
@@ -287,10 +344,10 @@
                             </p>
                         </div>
                         <div
-                            class="row row-cols-lg-3 specialities__list"
+                            class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gap-row-5 specialities__list"
                             data-aos="flip-right"
                         >
-                            <div class="col">
+                            <div class="col active">
                                 <div class="specialities__item">
                                     <div class="specialities__icon">
                                         <img
@@ -357,6 +414,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -376,7 +438,7 @@
                             </p>
                         </div>
                         <div class="row row-list" data-aos="fade-up">
-                            <div class="col-lg-6">
+                            <div class="col col-lg-6 col-sm-12">
                                 <div class="project__item">
                                     <div class="project__item-content">
                                         <h3
@@ -394,13 +456,29 @@
                                             Case Study
                                         </a>
                                     </div>
-                                    <a href="#">
-                                        <img
-                                            class="project__item-img"
-                                            src="./assets/img/project-01.png"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <div class="project__item-right">
+                                        <picture>
+                                            <source
+                                                media="(max-width: 575.98px)"
+                                                srcset="
+                                                    ./assets/img/project-01Mobile.png
+                                                "
+                                            />
+                                            <source
+                                                media="(min-width: 576px)"
+                                                srcset="
+                                                    ./assets/img/project-01.png
+                                                "
+                                            />
+
+                                            <img
+                                                class="project__item-img"
+                                                src="./assets/img/project-01.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+
                                     <img
                                         class="project-diagonal"
                                         src="./assets/icon/project-diagonal.svg"
@@ -408,7 +486,7 @@
                                     />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col col-lg-6 col-sm-12">
                                 <div class="project__item">
                                     <div class="project__item-content">
                                         <h3
@@ -426,13 +504,29 @@
                                             Case Study
                                         </a>
                                     </div>
-                                    <a href="#">
-                                        <img
-                                            class="project__item-img"
-                                            src="./assets/img/project-02.png"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <div class="project__item-right">
+                                        <picture>
+                                            <source
+                                                media="(max-width: 575.98px)"
+                                                srcset="
+                                                    ./assets/img/project-02Mobile.png
+                                                "
+                                            />
+                                            <source
+                                                media="(min-width: 576px)"
+                                                srcset="
+                                                    ./assets/img/project-02.png
+                                                "
+                                            />
+
+                                            <img
+                                                class="project__item-img"
+                                                src="./assets/img/project-02.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+
                                     <img
                                         class="project-diagonal"
                                         src="./assets/icon/project-diagonal.svg"
@@ -440,13 +534,13 @@
                                     />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col col-lg-6 col-sm-12">
                                 <div class="project__item">
                                     <div class="project__item-content">
                                         <h3
                                             class="project__item-heading line-clamp line-clamp-1"
                                         >
-                                            Web App
+                                            Wally Website
                                         </h3>
                                         <p
                                             class="project__item-desc line-clamp line-clamp-2"
@@ -458,13 +552,29 @@
                                             Case Study
                                         </a>
                                     </div>
-                                    <a href="#">
-                                        <img
-                                            class="project__item-img"
-                                            src="./assets/img/project-03.png"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <div class="project__item-right">
+                                        <picture>
+                                            <source
+                                                media="(max-width: 575.98px)"
+                                                srcset="
+                                                    ./assets/img/project-03Mobile.png
+                                                "
+                                            />
+                                            <source
+                                                media="(min-width: 576px)"
+                                                srcset="
+                                                    ./assets/img/project-03.png
+                                                "
+                                            />
+
+                                            <img
+                                                class="project__item-img"
+                                                src="./assets/img/project-03.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+
                                     <img
                                         class="project-diagonal"
                                         src="./assets/icon/project-diagonal.svg"
@@ -472,13 +582,13 @@
                                     />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col col-lg-6 col-sm-12">
                                 <div class="project__item">
                                     <div class="project__item-content">
                                         <h3
                                             class="project__item-heading line-clamp line-clamp-1"
                                         >
-                                            Oculus Website
+                                            Banking App
                                         </h3>
                                         <p
                                             class="project__item-desc line-clamp line-clamp-2"
@@ -490,13 +600,29 @@
                                             Case Study
                                         </a>
                                     </div>
-                                    <a href="#">
-                                        <img
-                                            class="project__item-img"
-                                            src="./assets/img/project-04.png"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <div class="project__item-right">
+                                        <picture>
+                                            <source
+                                                media="(max-width: 575.98px)"
+                                                srcset="
+                                                    ./assets/img/project-04Mobile.png
+                                                "
+                                            />
+                                            <source
+                                                media="(min-width: 576px)"
+                                                srcset="
+                                                    ./assets/img/project-04.png
+                                                "
+                                            />
+
+                                            <img
+                                                class="project__item-img"
+                                                src="./assets/img/project-04.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                    </div>
+
                                     <img
                                         class="project-diagonal"
                                         src="./assets/icon/project-diagonal.svg"
@@ -552,7 +678,7 @@
                             </div>
                         </div>
                         <span class="about__separation"></span>
-                        <div class="row row-cols-1 about__video" data-aos="flip-up">
+                        <div class="row row-cols-1 about__video">
                             <div class="col">
                                 <button class="about__play">
                                     <img
@@ -593,141 +719,163 @@
                         </p>
                     </div>
 
-                    <div class="evaluate__list">
-                        <!-- People-1 -->
-                        <div class="evaluate__people active">
-                            <p class="evaluate__comment">
-                                “Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa.”
-                            </p>
-                            <div class="evaluate__avatar">
-                                <div class="evaluate__icon">
-                                    <img
-                                        src="./assets/img/evaluate-01.jpg"
-                                        alt=""
-                                    />
+                    <div class="container__evaluate">
+                        <div class="evaluate__list">
+                            <!-- People-1 -->
+                            <div class="evaluate__people active">
+                                <p class="evaluate__comment">
+                                    “Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa.”
+                                </p>
+                                <div class="evaluate__avatar">
+                                    <div class="evaluate__icon">
+                                        <img
+                                            src="./assets/img/evaluate-01.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="evaluate__title"
+                                        >Joe Elia - 1</span
+                                    >
                                 </div>
-                                <span class="evaluate__title"
-                                    >Joe Elia - 1</span
-                                >
+                                <p class="evaluate__desc evaluate__avatar-mt">
+                                    User Interface Design at PCL Lab
+                                </p>
                             </div>
-                            <p class="evaluate__desc evaluate__avatar-mt">
-                                User Interface Design at PCL Lab
-                            </p>
-                        </div>
-                        <!-- People-2 -->
-                        <div class="evaluate__people">
-                            <p class="evaluate__comment">
-                                “Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa.”
-                            </p>
-                            <div class="evaluate__avatar">
-                                <div class="evaluate__icon">
-                                    <img
-                                        src="./assets/img/evaluate-02.jpg"
-                                        alt=""
-                                    />
+                            <!-- People-2 -->
+                            <div class="evaluate__people">
+                                <p class="evaluate__comment">
+                                    “Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa.”
+                                </p>
+                                <div class="evaluate__avatar">
+                                    <div class="evaluate__icon">
+                                        <img
+                                            src="./assets/img/evaluate-02.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="evaluate__title"
+                                        >Joe Elia - 2</span
+                                    >
                                 </div>
-                                <span class="evaluate__title"
-                                    >Joe Elia - 2</span
-                                >
+                                <p class="evaluate__desc evaluate__avatar-mt">
+                                    User Interface Design at PCL Lab
+                                </p>
                             </div>
-                            <p class="evaluate__desc evaluate__avatar-mt">
-                                User Interface Design at PCL Lab
-                            </p>
-                        </div>
-                        <!-- People-3 -->
-                        <div class="evaluate__people">
-                            <p class="evaluate__comment">
-                                “Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa.”
-                            </p>
-                            <div class="evaluate__avatar">
-                                <div class="evaluate__icon">
-                                    <img
-                                        src="./assets/img/evaluate-03.jpg"
-                                        alt=""
-                                    />
+                            <!-- People-3 -->
+                            <div class="evaluate__people">
+                                <p class="evaluate__comment">
+                                    “Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa.”
+                                </p>
+                                <div class="evaluate__avatar">
+                                    <div class="evaluate__icon">
+                                        <img
+                                            src="./assets/img/evaluate-03.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="evaluate__title"
+                                        >Joe Elia - 3</span
+                                    >
                                 </div>
-                                <span class="evaluate__title"
-                                    >Joe Elia - 3</span
-                                >
+                                <p class="evaluate__desc evaluate__avatar-mt">
+                                    User Interface Design at PCL Lab
+                                </p>
                             </div>
-                            <p class="evaluate__desc evaluate__avatar-mt">
-                                User Interface Design at PCL Lab
-                            </p>
-                        </div>
-                        <!-- People-4 -->
-                        <div class="evaluate__people">
-                            <p class="evaluate__comment">
-                                “Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa.”
-                            </p>
-                            <div class="evaluate__avatar">
-                                <div class="evaluate__icon">
-                                    <img
-                                        src="./assets/img/evaluate-04.jpg"
-                                        alt=""
-                                    />
+                            <!-- People-4 -->
+                            <div class="evaluate__people">
+                                <p class="evaluate__comment">
+                                    “Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa.”
+                                </p>
+                                <div class="evaluate__avatar">
+                                    <div class="evaluate__icon">
+                                        <img
+                                            src="./assets/img/evaluate-04.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="evaluate__title"
+                                        >Joe Elia - 4</span
+                                    >
                                 </div>
-                                <span class="evaluate__title"
-                                    >Joe Elia - 4</span
-                                >
+                                <p class="evaluate__desc evaluate__avatar-mt">
+                                    User Interface Design at PCL Lab
+                                </p>
                             </div>
-                            <p class="evaluate__desc evaluate__avatar-mt">
-                                User Interface Design at PCL Lab
-                            </p>
-                        </div>
-                        <!-- People-5 -->
-                        <div class="evaluate__people">
-                            <p class="evaluate__comment">
-                                “Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa.”
-                            </p>
-                            <div class="evaluate__avatar">
-                                <div class="evaluate__icon">
-                                    <img
-                                        src="./assets/img/evaluate-05.jpg"
-                                        alt=""
-                                    />
+                            <!-- People-5 -->
+                            <div class="evaluate__people">
+                                <p class="evaluate__comment">
+                                    “Duis aute irure dolor in reprehenderit in
+                                    voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat
+                                    cupidatat non proident, sunt in culpa.”
+                                </p>
+                                <div class="evaluate__avatar">
+                                    <div class="evaluate__icon">
+                                        <img
+                                            src="./assets/img/evaluate-05.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="evaluate__title"
+                                        >Joe Elia - 5</span
+                                    >
                                 </div>
-                                <span class="evaluate__title"
-                                    >Joe Elia - 5</span
-                                >
+                                <p class="evaluate__desc evaluate__avatar-mt">
+                                    User Interface Design at PCL Lab
+                                </p>
                             </div>
-                            <p class="evaluate__desc evaluate__avatar-mt">
-                                User Interface Design at PCL Lab
-                            </p>
                         </div>
-                    </div>
-                    <div class="dots">
-                        <div class="dot active"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
                     </div>
                 </div>
-                <img
-                    class="evaluate__diagonal--left"
-                    src="./assets/icon/evaluate-diagona-left.svg"
-                    alt=""
-                />
-                <img
-                    class="evaluate__diagonal--right"
-                    src="./assets/icon/evaluate-diagona-right.svg"
-                    alt=""
-                />
+                <picture>
+                    <source
+                        media="(max-width: 575.98px)"
+                        srcset="./assets/icon/evaluate-diagona-leftMobile.svg"
+                    />
+                    <source
+                        media="(min-width: 576px)"
+                        srcset="./assets/icon/evaluate-diagona-left.svg"
+                    />
+                    <img
+                        class="evaluate__diagonal--left"
+                        src="./assets/icon/evaluate-diagona-left.svg"
+                        alt=""
+                    />
+                </picture>
+                <picture>
+                    <source
+                        media="(max-width: 575.98px)"
+                        srcset="./assets/icon/evaluate-diagona-rightMobile.svg"
+                    />
+                    <source
+                        media="(min-width: 576px)"
+                        srcset="./assets/icon/evaluate-diagona-right.svg"
+                    />
+                    <img
+                        class="evaluate__diagonal--right"
+                        src="./assets/icon/evaluate-diagona-right.svg"
+                        alt=""
+                    />
+                </picture>
             </section>
 
             <!-- Question -->
@@ -737,8 +885,12 @@
                         <h2 class="question__sub-heading">
                             A few questions clients normally ask me
                         </h2>
-                        <div class="question__list" data-aos="fade-down"  data-aos-easing="linear"
-                        data-aos-duration="1500">
+                        <div
+                            class="question__list"
+                            data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500"
+                        >
                             <!-- Item 1 -->
                             <div class="question__list-item">
                                 <div class="question__list-content">
@@ -876,7 +1028,11 @@
             <!-- Feature -->
             <section id="service" class="feature">
                 <div class="container">
-                    <div class="feature__inner" data-aos="fade-up"   data-aos-duration="3000">
+                    <div
+                        class="feature__inner"
+                        data-aos="fade-up"
+                        data-aos-duration="3000"
+                    >
                         <h2 class="feature__sub-heading">My atmosphere</h2>
                         <p class="feature__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -887,28 +1043,33 @@
 
                         <!-- feature-list -->
                         <div class="feature__list">
-                            <div class="row">
-                                <div class="col-md-4">
+                            <div class="row gap-row-5 feature__list--row">
+                                <div class="col col-md-6 col-lg-4 col-sm-12 active">
                                     <img
                                         class="feature__img"
                                         src="./assets/img/featured-01.png"
                                         alt="My atmosphere"
                                     />
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col col-md-6 col-lg-4 col-sm-12">
                                     <img
                                         class="feature__img"
                                         src="./assets/img/featured-02.png"
                                         alt="My atmosphere"
                                     />
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col col-md-6 col-lg-4 col-sm-12">
                                     <img
                                         class="feature__img"
                                         src="./assets/img/featured-03.png"
                                         alt="My atmosphere"
                                     />
                                 </div>
+                            </div>
+                            <div class="dots">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
                             </div>
                         </div>
                     </div>
@@ -942,11 +1103,22 @@
                             src="./assets/icon/contact-icon-01.svg"
                             alt=""
                         />
-                        <img
-                            class="contact__decorate contact__decorate-2"
-                            src="./assets/icon/contact-icon-02.svg"
-                            alt=""
-                        />
+                        <picture>
+                            <source
+                                media="(max-width: 767.98px)"
+                                srcset="./assets/icon/contact-icon-02Mobile.svg"
+                            />
+                            <source
+                                media="(min-width: 768px)"
+                                srcset="./assets/icon/contact-icon-02.svg"
+                            />
+                            <img
+                                class="contact__decorate contact__decorate-2"
+                                src="./assets/icon/contact-icon-02.svg"
+                                alt=""
+                            />
+                        </picture>
+
                         <img
                             class="contact__decorate contact__decorate-3"
                             src="./assets/icon/contact-icon-03.svg"
@@ -972,9 +1144,10 @@
                         <div class="menu__email-text">hi@arif.interactive</div>
                     </div>
                     <!-- Logo -->
-                    <a href="">
+                    <a class="menu__logo" href="">
                         <img src="./assets/icon/logo.png" alt="" class="logo" />
                     </a>
+
                     <!-- Navigation -->
                     <nav class="navigation">
                         <ul class="navigation__list">
